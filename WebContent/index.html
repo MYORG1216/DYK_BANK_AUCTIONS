@@ -1,0 +1,54 @@
+<!DOCTYPE HTML>
+<html>
+	<head>
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta http-equiv='Content-Type' content='text/html;charset=UTF-8'/>
+		 <style>
+		#formsignup{
+		text-align:center;
+		}
+		#formsignin{
+		text-align:center;
+		}
+		#bidingframe{
+		text-align:center;
+		}
+		.textAlignCenter{
+		text-align:center;
+		}
+		.signupForm{
+		padding-left: 20% ;
+		padding-top: 10% ;
+		}
+		#quick{
+		    margin-top: -30px;
+		}
+		</style>
+		<script src="resources/sap-ui-core.js"
+				id="sap-ui-bootstrap"
+				data-sap-ui-libs="sap.m,sap.ui.layout,sap.ui.comp,sap.ui.unified,sap.ui.core"
+				data-sap-ui-theme="sap_belize_plus"
+				data-sap-ui-xx-bindingSyntax="complex"
+				data-sap-ui-resourceroots='{"wcontent":"./"}'
+				data-sap-ui-preload="async">
+				
+				</script>
+		<!-- only load the mobile lib "sap.m" and the "sap_bluecrystal" theme -->
+
+		<script>
+		sap.ui.getCore().attachInit(function() {
+			new  sap.m.Shell({
+				showLogout:false,
+				app: new sap.ui.core.ComponentContainer({
+					name:"wcontent",
+					propagateModel:true
+			})
+		}).placeAt("content");
+		});
+		</script>
+
+	</head>
+	<body class="sapUiBody" role="application">
+		<div id="content"></div>
+	</body>
+</html>
